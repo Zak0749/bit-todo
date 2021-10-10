@@ -18,6 +18,12 @@ export class User {
 
   @Prop({ required: true })
   lists: List[];
+
+  @Prop()
+  updatedAt: Date;
+
+  @Prop()
+  createdAt: Date;
 }
 
 @Schema({ timestamps: true, id: true })
@@ -33,6 +39,12 @@ export class List {
 
   @Prop()
   tasks: Task[];
+
+  @Prop()
+  updatedAt: Date;
+
+  @Prop()
+  createdAt: Date;
 }
 
 @Schema({ timestamps: true, id: true })
@@ -51,6 +63,12 @@ export class Task {
 
   @Prop()
   completed: string;
+
+  @Prop()
+  updatedAt: Date;
+
+  @Prop()
+  createdAt: Date;
 }
 
 export const ListSchema = SchemaFactory.createForClass(List);
